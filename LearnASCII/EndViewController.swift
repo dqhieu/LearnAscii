@@ -98,10 +98,10 @@ class EndViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         if indexPath.section == 0 {
-            let text = "\(AsciiTable.shared.getHex(at: rightAnswer[indexPath.row])):   \(AsciiTable.shared.getChar(at: rightAnswer[indexPath.row]))"
+            let text = "\(AsciiTable.shared.get(at: rightAnswer[indexPath.row], system: GameSettings.shared.asciiSystem)):   \(AsciiTable.shared.getChar(at: rightAnswer[indexPath.row]))"
             cell.textLabel?.text = text
         } else if indexPath.section == 1 {
-            let text = "\(AsciiTable.shared.getHex(at: wrongAnswer[indexPath.row])):   \(AsciiTable.shared.getChar(at: wrongAnswer[indexPath.row]))"
+            let text = "\(AsciiTable.shared.get(at: wrongAnswer[indexPath.row], system: GameSettings.shared.asciiSystem)):   \(AsciiTable.shared.getChar(at: wrongAnswer[indexPath.row]))"
             cell.textLabel?.text = text
         }
         return cell

@@ -46,6 +46,7 @@ class LookupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func didTapCloseButton() {
+        self.view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -71,7 +72,7 @@ class LookupViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if isSearching {
             cell.textLabel?.text = filterResult[indexPath.row]
         } else {
-            cell.textLabel?.text = "\(AsciiTable.shared.getHex(at: indexPath.row)):   \(AsciiTable.shared.getChar(at: indexPath.row))"
+            cell.textLabel?.text = "\(AsciiTable.shared.get(at: indexPath.row, system: GameSettings.shared.asciiSystem)):   \(AsciiTable.shared.getChar(at: indexPath.row))"
         }
         return cell
     }
@@ -95,7 +96,7 @@ class LookupViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let searchTexts = searchText.components(separatedBy: " ")
             for text in searchTexts {
                 if let index = AsciiTable.shared.indexOf(char: text) {
-                    filterResult.append("\(AsciiTable.shared.getHex(at: index)):   \(AsciiTable.shared.getChar(at: index))")
+                    filterResult.append("\(AsciiTable.shared.get(at: index, system: GameSettings.shared.asciiSystem)):   \(AsciiTable.shared.getChar(at: index))")
                 }
             }
             tableView.reloadData()
