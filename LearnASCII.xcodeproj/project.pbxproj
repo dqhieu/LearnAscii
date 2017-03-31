@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710E4BD51E8E565300BFB1A3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E4BD41E8E565300BFB1A3 /* SettingsViewController.swift */; };
+		710E4BD71E8E56C400BFB1A3 /* NumberOfQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E4BD61E8E56C400BFB1A3 /* NumberOfQuizCell.swift */; };
+		710E4BD91E8E58E600BFB1A3 /* TimePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E4BD81E8E58E600BFB1A3 /* TimePickerCell.swift */; };
+		710E4BDB1E8E636B00BFB1A3 /* AsciiSystemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E4BDA1E8E636B00BFB1A3 /* AsciiSystemCell.swift */; };
+		710E4BDD1E8E64F500BFB1A3 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E4BDC1E8E64F500BFB1A3 /* GameSettings.swift */; };
 		713E37341E8753F700F750AE /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713E37331E8753F700F750AE /* EndViewController.swift */; };
 		715174BA1E866976001CAC5A /* AsciiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715174B91E866976001CAC5A /* AsciiTable.swift */; };
 		715B07CE1E8BFC17008DF677 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B07CD1E8BFC17008DF677 /* LookupViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		710E4BD41E8E565300BFB1A3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		710E4BD61E8E56C400BFB1A3 /* NumberOfQuizCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfQuizCell.swift; sourceTree = "<group>"; };
+		710E4BD81E8E58E600BFB1A3 /* TimePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerCell.swift; sourceTree = "<group>"; };
+		710E4BDA1E8E636B00BFB1A3 /* AsciiSystemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsciiSystemCell.swift; sourceTree = "<group>"; };
+		710E4BDC1E8E64F500BFB1A3 /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 		713E37331E8753F700F750AE /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		715174B91E866976001CAC5A /* AsciiTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsciiTable.swift; sourceTree = "<group>"; };
 		715B07CD1E8BFC17008DF677 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +105,12 @@
 				71DDEA191E865BF5006972B5 /* WelcomeViewController.swift */,
 				713E37331E8753F700F750AE /* EndViewController.swift */,
 				715B07CD1E8BFC17008DF677 /* LookupViewController.swift */,
+				710E4BD41E8E565300BFB1A3 /* SettingsViewController.swift */,
+				710E4BD61E8E56C400BFB1A3 /* NumberOfQuizCell.swift */,
+				710E4BD81E8E58E600BFB1A3 /* TimePickerCell.swift */,
+				710E4BDA1E8E636B00BFB1A3 /* AsciiSystemCell.swift */,
 				715174B91E866976001CAC5A /* AsciiTable.swift */,
+				710E4BDC1E8E64F500BFB1A3 /* GameSettings.swift */,
 				71DDEA091E864A8C006972B5 /* Main.storyboard */,
 				71DDEA0C1E864A8C006972B5 /* Assets.xcassets */,
 				71DDEA0E1E864A8C006972B5 /* LaunchScreen.storyboard */,
@@ -232,9 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710E4BD71E8E56C400BFB1A3 /* NumberOfQuizCell.swift in Sources */,
 				715174BA1E866976001CAC5A /* AsciiTable.swift in Sources */,
+				710E4BDD1E8E64F500BFB1A3 /* GameSettings.swift in Sources */,
 				713E37341E8753F700F750AE /* EndViewController.swift in Sources */,
+				710E4BD91E8E58E600BFB1A3 /* TimePickerCell.swift in Sources */,
+				710E4BD51E8E565300BFB1A3 /* SettingsViewController.swift in Sources */,
 				71DDEA1A1E865BF5006972B5 /* WelcomeViewController.swift in Sources */,
+				710E4BDB1E8E636B00BFB1A3 /* AsciiSystemCell.swift in Sources */,
 				71DDEA081E864A8C006972B5 /* ViewController.swift in Sources */,
 				715B07CE1E8BFC17008DF677 /* LookupViewController.swift in Sources */,
 				71DDEA061E864A8C006972B5 /* AppDelegate.swift in Sources */,

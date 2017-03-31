@@ -8,6 +8,14 @@
 
 import UIKit
 
+enum AsciiSystem: String {
+    case hex    = "hexadecimal"
+    case oct    = "octal"
+    case bin    = "binary"
+    case dec    = "decimal"
+    case char   = "char"
+}
+
 class AsciiTable: NSObject {
     static let shared = AsciiTable()
     
@@ -15,6 +23,7 @@ class AsciiTable: NSObject {
     private var char:[String] = []
     private var binary:[String] = []
     private var octa:[String] = []
+    private var decimal:[String] = []
     
     public var count: Int {
         get {
@@ -216,14 +225,6 @@ class AsciiTable: NSObject {
         hex.append("7D")
         hex.append("7E")
         
-        octa.append("32")
-        octa.append("33")
-        octa.append("34")
-        octa.append("35")
-        octa.append("36")
-        octa.append("37")
-        octa.append("38")
-        octa.append("39")
         octa.append("40")
         octa.append("41")
         octa.append("42")
@@ -232,8 +233,6 @@ class AsciiTable: NSObject {
         octa.append("45")
         octa.append("46")
         octa.append("47")
-        octa.append("48")
-        octa.append("49")
         octa.append("50")
         octa.append("51")
         octa.append("52")
@@ -242,8 +241,6 @@ class AsciiTable: NSObject {
         octa.append("55")
         octa.append("56")
         octa.append("57")
-        octa.append("58")
-        octa.append("59")
         octa.append("60")
         octa.append("61")
         octa.append("62")
@@ -252,8 +249,6 @@ class AsciiTable: NSObject {
         octa.append("65")
         octa.append("66")
         octa.append("67")
-        octa.append("68")
-        octa.append("69")
         octa.append("70")
         octa.append("71")
         octa.append("72")
@@ -262,28 +257,6 @@ class AsciiTable: NSObject {
         octa.append("75")
         octa.append("76")
         octa.append("77")
-        octa.append("78")
-        octa.append("79")
-        octa.append("80")
-        octa.append("81")
-        octa.append("82")
-        octa.append("83")
-        octa.append("84")
-        octa.append("85")
-        octa.append("86")
-        octa.append("87")
-        octa.append("88")
-        octa.append("89")
-        octa.append("90")
-        octa.append("91")
-        octa.append("92")
-        octa.append("93")
-        octa.append("94")
-        octa.append("95")
-        octa.append("96")
-        octa.append("97")
-        octa.append("98")
-        octa.append("99")
         octa.append("100")
         octa.append("101")
         octa.append("102")
@@ -292,8 +265,6 @@ class AsciiTable: NSObject {
         octa.append("105")
         octa.append("106")
         octa.append("107")
-        octa.append("108")
-        octa.append("109")
         octa.append("110")
         octa.append("111")
         octa.append("112")
@@ -302,15 +273,53 @@ class AsciiTable: NSObject {
         octa.append("115")
         octa.append("116")
         octa.append("117")
-        octa.append("118")
-        octa.append("119")
         octa.append("120")
         octa.append("121")
         octa.append("122")
         octa.append("123")
-        octa.append("124")
+        octa.append("123")
         octa.append("125")
         octa.append("126")
+        octa.append("127")
+        octa.append("130")
+        octa.append("131")
+        octa.append("132")
+        octa.append("133")
+        octa.append("134")
+        octa.append("135")
+        octa.append("136")
+        octa.append("137")
+        octa.append("140")
+        octa.append("141")
+        octa.append("142")
+        octa.append("143")
+        octa.append("144")
+        octa.append("145")
+        octa.append("146")
+        octa.append("147")
+        octa.append("150")
+        octa.append("151")
+        octa.append("152")
+        octa.append("153")
+        octa.append("154")
+        octa.append("155")
+        octa.append("156")
+        octa.append("157")
+        octa.append("160")
+        octa.append("161")
+        octa.append("162")
+        octa.append("163")
+        octa.append("164")
+        octa.append("165")
+        octa.append("166")
+        octa.append("167")
+        octa.append("170")
+        octa.append("171")
+        octa.append("172")
+        octa.append("173")
+        octa.append("174")
+        octa.append("175")
+        octa.append("176")
         
         binary.append("0010 0000")
         binary.append("0010 0001")
@@ -407,32 +416,150 @@ class AsciiTable: NSObject {
         binary.append("0111 1100")
         binary.append("0111 1101")
         binary.append("0111 1110")
+        
+        decimal.append("32")
+        decimal.append("33")
+        decimal.append("34")
+        decimal.append("35")
+        decimal.append("36")
+        decimal.append("37")
+        decimal.append("38")
+        decimal.append("39")
+        decimal.append("40")
+        decimal.append("41")
+        decimal.append("42")
+        decimal.append("43")
+        decimal.append("44")
+        decimal.append("45")
+        decimal.append("46")
+        decimal.append("47")
+        decimal.append("48")
+        decimal.append("49")
+        decimal.append("50")
+        decimal.append("51")
+        decimal.append("52")
+        decimal.append("53")
+        decimal.append("54")
+        decimal.append("55")
+        decimal.append("56")
+        decimal.append("57")
+        decimal.append("58")
+        decimal.append("59")
+        decimal.append("60")
+        decimal.append("61")
+        decimal.append("62")
+        decimal.append("63")
+        decimal.append("64")
+        decimal.append("65")
+        decimal.append("66")
+        decimal.append("67")
+        decimal.append("68")
+        decimal.append("69")
+        decimal.append("70")
+        decimal.append("71")
+        decimal.append("72")
+        decimal.append("73")
+        decimal.append("74")
+        decimal.append("75")
+        decimal.append("76")
+        decimal.append("77")
+        decimal.append("78")
+        decimal.append("79")
+        decimal.append("80")
+        decimal.append("81")
+        decimal.append("82")
+        decimal.append("83")
+        decimal.append("84")
+        decimal.append("85")
+        decimal.append("86")
+        decimal.append("87")
+        decimal.append("88")
+        decimal.append("89")
+        decimal.append("90")
+        decimal.append("91")
+        decimal.append("92")
+        decimal.append("93")
+        decimal.append("94")
+        decimal.append("95")
+        decimal.append("96")
+        decimal.append("97")
+        decimal.append("98")
+        decimal.append("99")
+        decimal.append("100")
+        decimal.append("101")
+        decimal.append("102")
+        decimal.append("103")
+        decimal.append("104")
+        decimal.append("105")
+        decimal.append("106")
+        decimal.append("107")
+        decimal.append("108")
+        decimal.append("109")
+        decimal.append("110")
+        decimal.append("111")
+        decimal.append("112")
+        decimal.append("113")
+        decimal.append("114")
+        decimal.append("115")
+        decimal.append("116")
+        decimal.append("117")
+        decimal.append("118")
+        decimal.append("119")
+        decimal.append("120")
+        decimal.append("121")
+        decimal.append("122")
+        decimal.append("123")
+        decimal.append("124")
+        decimal.append("125")
+        decimal.append("126")
     }
     
-    func getChar(at posistion: Int) -> String {
-        if posistion < char.count {
-            return char[posistion]
+    func get(at position: Int, system: AsciiSystem) -> String {
+        switch system {
+        case .bin:
+            return getBinary(at: position)
+        case .oct:
+            return getOcta(at: position)
+        case .dec:
+            return getDecimal(at: position)
+        case .hex:
+            return getHex(at: position)
+        case .char:
+            return getChar(at: position)
+        }
+    }
+    
+    func getChar(at position: Int) -> String {
+        if position < char.count {
+            return char[position]
         }
         return ""
     }
     
-    func getHex(at posistion: Int) -> String {
-        if posistion < hex.count {
-            return hex[posistion]
+    func getHex(at position: Int) -> String {
+        if position < hex.count {
+            return hex[position]
         }
         return ""
     }
     
-    func getOcta(at posistion: Int) -> String {
-        if posistion < octa.count {
-            return octa[posistion]
+    func getOcta(at position: Int) -> String {
+        if position < octa.count {
+            return octa[position]
         }
         return ""
     }
     
-    func getBinary(at posistion: Int) -> String {
-        if posistion < binary.count {
-            return binary[posistion]
+    func getBinary(at position: Int) -> String {
+        if position < binary.count {
+            return binary[position]
+        }
+        return ""
+    }
+    
+    func getDecimal(at position: Int) -> String {
+        if position < decimal.count {
+            return decimal[position]
         }
         return ""
     }

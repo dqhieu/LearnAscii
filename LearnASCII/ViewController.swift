@@ -20,12 +20,10 @@ class ViewController: UIViewController, EndViewControllerDelegate {
     var lblRemainingCode: UILabel!
     
     var progessView: UIProgressView!
+    var timer: Timer!
     
     var answer: [Int] = [0,0,0,0]
     var currentAnswer: Int = 0
-    
-    var nQuiz: Int = 30
-    var time: Int = 120
     
     var count: Int = 0
     
@@ -134,16 +132,6 @@ class ViewController: UIViewController, EndViewControllerDelegate {
     }
     
     func initVariables() {
-        if let nQuiz = UserDefaults.standard.value(forKey: "nQuiz") as? Int {
-            self.nQuiz = nQuiz
-        } else {
-            self.nQuiz = 30
-        }
-        if let time = UserDefaults.standard.value(forKey: "time") as? Int {
-            self.time = time
-        } else {
-            self.time = 120
-        }
         self.count = 0
         self.progessView.progress = 0
         self.rightAnswer.removeAll()
@@ -151,8 +139,8 @@ class ViewController: UIViewController, EndViewControllerDelegate {
     }
     
     func initTimer() {
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer:Timer) in
-            self.progessView.progress += 1.0 / Float(self.time) / 2
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer:Timer) in
+            self.progessView.progress += 1.0 / Float(GameSettings.shared.time * 60) / 2
             if self.progessView.progress >= 1.0 {
                 self.endGame()
             }
@@ -177,7 +165,7 @@ class ViewController: UIViewController, EndViewControllerDelegate {
         answer[3] = Int(arc4random()) % AsciiTable.shared.count
         
         currentAnswer = answer[Int(arc4random()) % 4]
-        lblCode.text = AsciiTable.shared.getHex(at: currentAnswer)
+        lblCode.text = AsciiTable.shared.get(at: currentAnswer, system: GameSettings.shared.asciiSystem)
         
         let textA = NSAttributedString(string: AsciiTable.shared.getChar(at: answer[0]), attributes: [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 20)])
         buttonA.setAttributedTitle(textA, for: .normal)
@@ -188,12 +176,12 @@ class ViewController: UIViewController, EndViewControllerDelegate {
         let textD = NSAttributedString(string: AsciiTable.shared.getChar(at: answer[3]), attributes: [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 20)])
         buttonD.setAttributedTitle(textD, for: .normal)
         
-        lblRemainingCode.text = "\(count)/\(nQuiz)"
+        lblRemainingCode.text = "\(count)/\(GameSettings.shared.nQuiz)"
     }
     
     func checkGameEnd() {
         count += 1
-        if count >= nQuiz {
+        if count >= GameSettings.shared.nQuiz {
             endGame()
         } else {
             updateUI()
@@ -201,6 +189,7 @@ class ViewController: UIViewController, EndViewControllerDelegate {
     }
     
     func endGame() {
+        self.timer.invalidate()
         let vc = EndViewController()
         vc.rightAnswer = self.rightAnswer
         vc.wrongAnswer = self.wrongAnswer

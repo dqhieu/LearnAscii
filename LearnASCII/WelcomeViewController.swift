@@ -81,15 +81,9 @@ class WelcomeViewController: UIViewController {
 
     }
     
-    func initVariables() {
-        UserDefaults.standard.set(30, forKey: "nQuiz")
-        UserDefaults.standard.set(120, forKey: "time")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initControls()
-        initVariables()
     }
     
     func didTapStart() {
@@ -98,33 +92,9 @@ class WelcomeViewController: UIViewController {
     }
 
     func didTapSettings() {
-        let alert = UIAlertController(title: "Settings", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textfield: UITextField) in
-            textfield.keyboardType = .numberPad
-            textfield.placeholder = "Number of quiz"
-            if let nQuiz = UserDefaults.standard.value(forKey: "nQuiz") as? Int {
-                textfield.text = String(nQuiz)
-            }
-        }
-        alert.addTextField { (textfield: UITextField) in
-            textfield.keyboardType = .numberPad
-            textfield.placeholder = "Time in second"
-            if let time = UserDefaults.standard.value(forKey: "time") as? Int {
-                textfield.text = String(time)
-            }
-        }
-        let actionOK = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction) in
-            if let nQuiz = Int((alert.textFields?.first?.text)!) {
-                UserDefaults.standard.set(nQuiz, forKey: "nQuiz")
-            }
-            if let time = Int((alert.textFields?[1].text)!) {
-                UserDefaults.standard.set(time, forKey: "time")
-            }
-        }
-        let actionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        alert.addAction(actionOK)
-        alert.addAction(actionCancel)
-        present(alert, animated: true, completion: nil)
+        let vc = SettingsViewController()
+        let nvc = UINavigationController(rootViewController: vc)
+        self.present(nvc, animated: true, completion: nil)
     }
     
     func didTapLookup() {
