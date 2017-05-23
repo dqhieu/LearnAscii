@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController {
     
     func initControls() {
         imageView = UIImageView(frame: UIScreen.main.bounds)
-        imageView.image = UIImage(named: "image.jpg")
+        imageView.image = UIImage(named: "image.png")
         imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in

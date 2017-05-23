@@ -16,12 +16,12 @@
 		715174BA1E866976001CAC5A /* AsciiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715174B91E866976001CAC5A /* AsciiTable.swift */; };
 		715B07CE1E8BFC17008DF677 /* LookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B07CD1E8BFC17008DF677 /* LookupViewController.swift */; };
 		71745CF41E8D262700EC2F6E /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 71745CF31E8D262700EC2F6E /* LaunchScreen.png */; };
+		71C411321E909F8B00818D0E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 71C411311E909F8B00818D0E /* image.png */; };
 		71DDEA061E864A8C006972B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDEA051E864A8C006972B5 /* AppDelegate.swift */; };
 		71DDEA081E864A8C006972B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDEA071E864A8C006972B5 /* ViewController.swift */; };
 		71DDEA0B1E864A8C006972B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DDEA091E864A8C006972B5 /* Main.storyboard */; };
 		71DDEA0D1E864A8C006972B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DDEA0C1E864A8C006972B5 /* Assets.xcassets */; };
 		71DDEA101E864A8C006972B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DDEA0E1E864A8C006972B5 /* LaunchScreen.storyboard */; };
-		71DDEA181E865B19006972B5 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71DDEA171E865B19006972B5 /* image.jpg */; };
 		71DDEA1A1E865BF5006972B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDEA191E865BF5006972B5 /* WelcomeViewController.swift */; };
 		7205B36E6184283B3264F944 /* Pods_LearnASCII.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984A265472D8C1765B9210D4 /* Pods_LearnASCII.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +36,7 @@
 		715174B91E866976001CAC5A /* AsciiTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsciiTable.swift; sourceTree = "<group>"; };
 		715B07CD1E8BFC17008DF677 /* LookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupViewController.swift; sourceTree = "<group>"; };
 		71745CF31E8D262700EC2F6E /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		71C411311E909F8B00818D0E /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		71DDEA021E864A8C006972B5 /* LearnASCII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnASCII.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DDEA051E864A8C006972B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71DDEA071E864A8C006972B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		71DDEA0C1E864A8C006972B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71DDEA0F1E864A8C006972B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71DDEA111E864A8C006972B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71DDEA171E865B19006972B5 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		71DDEA191E865BF5006972B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		984A265472D8C1765B9210D4 /* Pods_LearnASCII.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnASCII.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3344352A94759DF0E397A7 /* Pods-LearnASCII.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnASCII.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnASCII/Pods-LearnASCII.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				71DDEA0C1E864A8C006972B5 /* Assets.xcassets */,
 				71DDEA0E1E864A8C006972B5 /* LaunchScreen.storyboard */,
 				71DDEA111E864A8C006972B5 /* Info.plist */,
-				71DDEA171E865B19006972B5 /* image.jpg */,
+				71C411311E909F8B00818D0E /* image.png */,
 				71745CF31E8D262700EC2F6E /* LaunchScreen.png */,
 			);
 			path = LearnASCII;
@@ -187,8 +187,8 @@
 				71DDEA101E864A8C006972B5 /* LaunchScreen.storyboard in Resources */,
 				71745CF41E8D262700EC2F6E /* LaunchScreen.png in Resources */,
 				71DDEA0D1E864A8C006972B5 /* Assets.xcassets in Resources */,
+				71C411321E909F8B00818D0E /* image.png in Resources */,
 				71DDEA0B1E864A8C006972B5 /* Main.storyboard in Resources */,
-				71DDEA181E865B19006972B5 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
